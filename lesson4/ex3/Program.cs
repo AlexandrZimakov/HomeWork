@@ -8,7 +8,7 @@
 void AllArray(int[] massiv){
     int index = 0;
     while (index < massiv.Length){
-        massiv[index] = new Random().Next(0,10);
+        massiv[index] = new Random().Next(0,100);
         index++;
     }
 }
