@@ -2,11 +2,8 @@
 m = 2, n = 3 -> A(m,n) = 9
 m = 3, n = 2 -> A(m,n) = 29*/
 
-Console.Write("Введите число M: ");
-int m = int.Parse(Console.ReadLine());
-
-Console.Write("Введите число N: ");
-int n = int.Parse(Console.ReadLine());
+int m = ReadInt("Введите число M: ");
+int n = ReadInt("Введите число N: ");
 
 AkkermanFunction(m,n);
 
@@ -30,4 +27,10 @@ int Akkerman(int m, int n)
     {
         return (Akkerman(m - 1, Akkerman(m, n - 1)));
     }
+}
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }

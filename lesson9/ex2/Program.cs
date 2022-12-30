@@ -3,11 +3,8 @@
 M = 1; N = 15 -> 120
 M = 4; N = 8. -> 30*/
 
-Console.Write("Введите число M: ");
-int m = int.Parse(Console.ReadLine());
-
-Console.Write("Введите число N: ");
-int n = int.Parse(Console.ReadLine());
+int m = ReadInt("Введите число M: ");
+int n = ReadInt("Введите число N: ");
 
 SumFromMN(m, n);
 
@@ -27,4 +24,10 @@ int SumMN(int m, int n)
         res = m + SumMN(m, n);
         return res;
     }
+}
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
